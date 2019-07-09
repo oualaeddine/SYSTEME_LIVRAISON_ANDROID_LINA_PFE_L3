@@ -2,8 +2,9 @@ package com.foodmile.livraison.Livraison.Adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +57,7 @@ public class RecyclerViewVehiculeAdapter extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public void onBindViewHolder(@NonNull MyVehiculeViewHolder myVehiculeViewHolder, final int i) {
-        Picasso.with(context).load(list.get(i).getPhoto()).into(myVehiculeViewHolder.imageView);
+        Picasso.get().load(list.get(i).getPhoto()).into(myVehiculeViewHolder.imageView);
         myVehiculeViewHolder.nom.setText(list.get(i).getNomvehicule());
         myVehiculeViewHolder.matricule.setText(list.get(i).getMatricule());
         myVehiculeViewHolder.type.setText(list.get(i).getType());

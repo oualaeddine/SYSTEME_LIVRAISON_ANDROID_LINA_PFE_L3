@@ -7,16 +7,19 @@ import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.os.Handler;
 import android.provider.MediaStore;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.annotation.Nullable;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
@@ -39,15 +42,12 @@ import com.foodmile.livraison.Livraison.Activitieslogin.SessionManager;
 import com.foodmile.livraison.Livraison.Adapter.RecyclerViewAdapter;
 import com.foodmile.livraison.Livraison.Classes.Categorie;
 import com.foodmile.livraison.R;
-import com.github.clans.fab.FloatingActionMenu;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -67,7 +67,7 @@ public class CategorieActivity extends AppCompatActivity implements RecyclerView
 
     private JsonArrayRequest jsonArrayRequest;
     private RequestQueue requestQueue;
-    private android.support.design.widget.FloatingActionButton buttonAdd;
+    private FloatingActionButton buttonAdd;
     private List<Categorie> list;
     String getId;
     private Bitmap bitmap;

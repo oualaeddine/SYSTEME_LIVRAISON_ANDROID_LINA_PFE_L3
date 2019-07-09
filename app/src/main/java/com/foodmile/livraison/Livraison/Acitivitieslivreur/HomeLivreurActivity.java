@@ -1,26 +1,23 @@
 package com.foodmile.livraison.Livraison.Acitivitieslivreur;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.text.Spannable;
 import android.text.SpannableString;
-import android.text.style.TypefaceSpan;
 import android.view.SubMenu;
 import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.foodmile.livraison.Livraison.Activitieslogin.SessionManager;
 import com.foodmile.livraison.Livraison.MapsFragment;
 import com.foodmile.livraison.Livraison.utils.StringConstants;
 import com.foodmile.livraison.R;
@@ -76,7 +73,7 @@ public class HomeLivreurActivity extends AppCompatActivity
         textView.setTypeface(mycusto);
 
         image =(CircularImageView)hView.findViewById(R.id.ImageProfilLivreur);
-        Picasso.with(this).load(StringConstants.PHOTO_LIVREUR+ id +".jpeg").noFade().into(image);
+        Picasso.get().load(StringConstants.PHOTO_LIVREUR + id + ".jpeg").noFade().into(image);
         navigationView.setNavigationItemSelectedListener(this);
 
 if(savedInstanceState == null){

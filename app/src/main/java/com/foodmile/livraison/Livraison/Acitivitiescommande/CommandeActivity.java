@@ -1,7 +1,8 @@
 package com.foodmile.livraison.Livraison.Acitivitiescommande;
 
 import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.GridLayout;
 import android.widget.TextView;

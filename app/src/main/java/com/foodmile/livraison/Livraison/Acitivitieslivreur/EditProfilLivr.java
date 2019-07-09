@@ -6,9 +6,10 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -63,7 +64,7 @@ public class EditProfilLivr extends Fragment {
         HashMap<String,String> user = sessionManagerLivr.getUserDetails();
      getIdLivreur = user.get(sessionManagerLivr.IDliv);
         imageView =v.findViewById(R.id.UpdateImageProfilLiv);
-        Picasso.with(getContext()).load(StringConstants.PHOTO_LIVREUR + getIdLivreur +".jpeg").noFade().into(imageView);
+        Picasso.get().load(StringConstants.PHOTO_LIVREUR + getIdLivreur + ".jpeg").noFade().into(imageView);
         btnupdate = v.findViewById(R.id.btnUpdateProfil);
         btnupdate.setOnClickListener(new View.OnClickListener() {
             @Override

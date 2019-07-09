@@ -3,9 +3,11 @@ package com.foodmile.livraison.Livraison.Activitieslogin;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
+
+import androidx.cardview.widget.CardView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -46,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
         String Image = user.get(sessionManager.IMAGE);
         String id = user.get(sessionManager.IDGer);
         textView.setText(Username);
-        Picasso.with(this).load(StringConstants.PHOTO_PROFILE + id + ".jpeg").noFade().into(imageView);
+        Picasso.get().load(StringConstants.PHOTO_PROFILE + id + ".jpeg").noFade().into(imageView);
         textView.setTypeface(mycusto);
         gridLayout =(GridLayout)findViewById(R.id.gridlayoutgerant);
         setSingleGrid(gridLayout);

@@ -19,19 +19,21 @@
     android:id="@+id/viewFlip"
     android:layout_marginBottom="30dp"
     ></ViewFlipper>
-            <android.support.v4.widget.SwipeRefreshLayout
+
+           <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                 android:id="@+id/swipe_refreshCat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <android.support.v7.widget.RecyclerView
+
+               <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layoutManager="android.support.v7.widget.LinearLayoutManager">
-                </android.support.v7.widget.RecyclerView>
-            </android.support.v4.widget.SwipeRefreshLayout>
+                   app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"></androidx.recyclerview.widget.RecyclerView>
+           </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </LinearLayout>
-    <android.support.design.widget.FloatingActionButton
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/ajoutCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

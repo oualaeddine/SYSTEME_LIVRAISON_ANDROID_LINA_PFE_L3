@@ -2,18 +2,16 @@ package com.foodmile.livraison.Livraison.Adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.foodmile.livraison.Livraison.Classes.Produit;
 import com.foodmile.livraison.R;
 import com.squareup.picasso.Picasso;
@@ -63,7 +61,7 @@ public class RecyclerViewProduitAdapter extends RecyclerView.Adapter<RecyclerVie
         myViewHolder.nom.setText(list.get(i).getNomproduit());
         myViewHolder.ing.setText(list.get(i).getIngrediants());
         myViewHolder.prix.setText((list.get(i).getPrixproduit()));
-        Picasso.with(context).load(list.get(i).getImageproduit()).into(myViewHolder.imageView);
+        Picasso.get().load(list.get(i).getImageproduit()).into(myViewHolder.imageView);
     }
 
 
