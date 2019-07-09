@@ -72,7 +72,7 @@ private List<Livreur>list;
 
 
         recyclerView = (RecyclerView)v.findViewById(R.id.recyclerLivreur);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setHasFixedSize(true);
         adapter = new RecyclerViewLivreurAdapter(getContext(),list);
@@ -136,6 +136,7 @@ private List<Livreur>list;
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
+                    Log.e("UpdateLivreur", "onErrorResponse: e", error);
                     Toast.makeText(getContext(), "error", Toast.LENGTH_SHORT).show();
                 }
             });
