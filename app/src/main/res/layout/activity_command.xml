@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Livraison.commandes.ui.command.CommandActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_command"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:textAlignment="center"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="Nouvelle commande" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selection des produits" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_recap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Commande en cours" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_command"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
