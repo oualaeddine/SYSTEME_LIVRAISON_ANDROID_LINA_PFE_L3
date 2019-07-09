@@ -6,7 +6,7 @@ package com.foodmile.livraison.Livraison.utils;
  */
 public class StringConstants {
 
-    private static final String API_URL = "http://192.168.0.155:8080/Projet/";
+    private static final String API_URL = "http://192.168.0.155/Projet/";
 
     public static final String
             URL_INSERT_Livreur = API_URL + "Livreur/InsertLivreur.php",
