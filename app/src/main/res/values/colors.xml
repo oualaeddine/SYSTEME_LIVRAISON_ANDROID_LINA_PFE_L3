@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ea0808</color>
+    <color name="colorPrimaryDark">#f93a3a</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="r">#db1608</color>
+    <color name="m">#f51f10</color>
+    <color name="l">#ff5d51</color>
+    <color name="k">#cf6e68</color>
+    <color name="p">#6f2a70</color>
+    <color name="ol">#bb39bd</color>
+    <color name="oo">#B83F32</color>
+    <color name="om">#DDDB49</color>
+    <color name="bleu">#B7DFE4</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+    <color name="black">#0F0F0F</color>
+    <color name="tablayout">#FDC867</color>
+    <color name="orange">#FF5722</color>
+    <color name="placeholder_bg">#EEEEEE</color>
+    <color name="rouge">#db1608</color>
+    <color name="item_namee">#0c0c0c</color>
+    <color name="descriptionn">#1a1a1a</color>
+    <color name="chef">#777</color>
+    <color name="timestamp">#777</color>
+</resources>

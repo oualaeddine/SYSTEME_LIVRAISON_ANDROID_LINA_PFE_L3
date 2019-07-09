@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Livraison.Acitivitiescommande.CommandeActivity"
+    android:background="@drawable/background_fragment"
+    android:weightSum="10"
+    >
+    <LinearLayout
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:text="Username"
+                android:id="@+id/usernamee"
+                android:textColor="#ffff"
+                />
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginRight="12dp"
+                android:id="@+id/imageGerant"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_commande"/>
+
+        </RelativeLayout>
+        <GridLayout
+            android:id="@+id/gridlayoutgerant"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnOrderPreserved="false"
+            android:rowCount="3"
+            android:columnCount="2"
+            android:layout_marginLeft="@dimen/padd_10"
+            android:alignmentMode="alignMargins"
+            >
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0"
+                android:layout_rowWeight="0"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/produit"
+
+                            />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gérer les produits"
+                        android:id="@+id/ll"
+                        android:textSize="15dp"
+                        android:layout_marginTop="12dp"/>
+                    </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0"
+                android:layout_marginLeft="12dp"
+                android:layout_rowWeight="0"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/livreur"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gérer les livreurs"
+                        android:id="@+id/gliv"
+                        android:textSize="15dp"
+                        android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0"
+                android:layout_rowWeight="0"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="@dimen/padd_10"
+               android:layout_marginTop="12dp"
+                >
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="16dp"
+
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/vehicule"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gérer les véhicules"
+                        android:id="@+id/gveh"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0"
+                android:layout_rowWeight="0"
+                app:cardElevation="6dp"
+                android:layout_marginLeft="12dp"
+                app:cardCornerRadius="@dimen/padd_10"
+                android:layout_marginTop="12dp"
+
+                >
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/commande"
+
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gérer les Commande"
+                        android:id="@+id/gcomm"
+                        android:textSize="15dp"
+                        android:layout_marginTop="12dp"/>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="0"
+                android:layout_rowWeight="0"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="@dimen/padd_10"
+                 android:layout_marginTop="12dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                       android:src="@drawable/grpsger"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/gpsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Voir GPS"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </GridLayout>
+    </LinearLayout>
+
+
+</ScrollView>

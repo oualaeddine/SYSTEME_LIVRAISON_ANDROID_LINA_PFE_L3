@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundproduct"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+    <EditText
+        android:id="@+id/Nomcat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:hint="entrer le nom de categorie qui veux avez supprimer"
+        android:background="@drawable/customedit"
+        android:layout_marginBottom="20dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="60dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customedit"
+            android:text="Supprimer Categorie"
+            android:padding="12dp"
+            android:id="@+id/buttonsupprimcat"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customedit"
+            android:text="Annuler"
+            android:layout_marginLeft="12dp"
+            android:padding="12dp"
+            android:id="@+id/buttonannulercat"/>
+
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

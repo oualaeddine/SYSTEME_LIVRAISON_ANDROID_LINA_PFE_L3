@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Import" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Slideshow" />
+        <item
+            android:id="@+id/nav_gps"
+            android:icon="@drawable/ic_pin_drop_black_24dp"
+            android:title="Voir Les commandes" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_edit_black_24dp"
+            android:title="Modifier Profile" />
+        <item
+            android:id="@+id/nav_send"
+            android:icon="@drawable/ic_replay_black_24dp"
+            android:title="Deconnexion" />
+    </group>
+
+
+</menu>

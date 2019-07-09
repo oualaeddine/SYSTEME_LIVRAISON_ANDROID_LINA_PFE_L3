@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/backgroundproduct">
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/ic_image_black_24dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/addimagevehicles"/>
+        <Button
+            android:padding="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:background="@drawable/customedit"
+            android:layout_gravity="center"
+            android:text="mettre une image de vehicule"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/btnaddimagevehi"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="12dp"
+            android:hint="Entrer le nom de vehicule"
+            android:background="@drawable/customedit"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:id="@+id/addnomvehicule"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:padding="12dp"
+            android:layout_margin="12dp"
+            android:hint="Entrer le matricule de vehicule"
+            android:background="@drawable/customedit"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/addmatriculevehicule"/>
+        <Spinner
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:pointerIcon="context_menu"
+            android:padding="12dp"
+            android:layout_margin="12dp"
+            android:layout_marginBottom="12dp"
+            android:id="@+id/addtype"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:dropDownWidth="300dp"
+            android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+            android:paddingRight="14dp"
+            android:popupBackground="@android:color/white"
+            android:popupElevation="3dp"
+            android:stateListAnimator="@drawable/spinner_anim"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="15dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/customedit"
+                android:layout_gravity="center"
+                android:text="Ajouter Vehicule"
+                android:padding="12dp"
+                android:id="@+id/addvehicles"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@drawable/customedit"
+                android:layout_gravity="center"
+                android:text="Annuler"
+                android:padding="12dp"
+                android:layout_marginLeft="12dp"
+                android:id="@+id/annuleraddvehicles"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>

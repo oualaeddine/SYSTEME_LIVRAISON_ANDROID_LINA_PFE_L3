@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/ajout"
+android:icon="@drawable/ic_add"
+    android:title="Ajouter Categorie" />
+
+    <item android:id="@+id/supprimer"
+        android:icon="@drawable/ic_close"
+        android:title="Supprimer Categorie" />
+</menu>

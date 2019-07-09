@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundproduct1"
+    android:layout_margin="12dp"
+   >
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="150dp"
+        android:background="@drawable/ic_image_black_24dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/imagecategorie"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customedit"
+        android:layout_gravity="center"
+        android:layout_marginBottom="0dp"
+        android:padding="20dp"
+        android:textSize="15dp"
+        android:text="mettre une image de categorie"
+        android:id="@+id/addimagecategorie"/>
+    <EditText
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="12dp"
+        android:hint="entrer le nom de categorie"
+        android:background="@drawable/customedit"
+        android:id="@+id/addnomcat"
+        android:layout_marginBottom="12dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+
+      >
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:padding="12dp"
+        android:id="@+id/addbuttoncat"
+        android:text="ajouter categorie"
+        android:background="@drawable/customedit"
+        android:layout_marginBottom="20dp"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:id="@+id/anuuleradd"
+        android:layout_marginLeft="12dp"
+        android:text="Annuler "
+        android:padding="12dp"
+        android:background="@drawable/customedit"
+        android:layout_marginBottom="20dp"
+        />
+    </LinearLayout>
+
+</LinearLayout>
