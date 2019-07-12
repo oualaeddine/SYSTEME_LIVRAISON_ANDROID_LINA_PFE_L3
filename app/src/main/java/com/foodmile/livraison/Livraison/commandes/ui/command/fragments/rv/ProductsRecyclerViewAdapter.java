@@ -46,4 +46,8 @@ public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ProductVie
     public int getItemCount() {
         return data.size();
     }
+
+    public void refreshRecapData() {
+        data = CommandActivity.currentCommand.getProducts();
+    }
 }

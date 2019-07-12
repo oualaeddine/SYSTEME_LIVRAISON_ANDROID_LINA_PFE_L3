@@ -1,5 +1,6 @@
 package com.foodmile.livraison.Livraison.commandes.ui.command.fragments.rv;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.foodmile.livraison.Livraison.commandes.system.models.CommandProduct;
 import com.foodmile.livraison.Livraison.commandes.ui.command.CommandActivity;
 import com.foodmile.livraison.R;
+import com.marcoscg.dialogsheet.DialogSheet;
 
 import static com.foodmile.livraison.Livraison.commandes.ui.command.fragments.rv.ProductsRecyclerViewAdapter.SELECTION;
 
@@ -24,12 +26,14 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     private LinearLayout selectItemLinearLayout;
 
     private final int type;
+    private Context context;
 
-    public ProductViewHolder(@NonNull View itemView, int type) {
+    public ProductViewHolder(@NonNull View itemView, int type, Context context) {
         super(itemView);
         this.type = type;
         productName = itemView.findViewById(R.id.product_name);
         selectItemLinearLayout = itemView.findViewById(R.id.item_select_ll);
+        this.context = context;
 
         if (type == SELECTION) {
             productPrice = itemView.findViewById(R.id.product_price);
@@ -85,6 +89,9 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
     }
 
     private void openSelectionDialog(CommandProduct p) {
+
+        DialogSheet dialogSheet = new DialogSheet(context);
+        dialogSheet.setView(R.layout.select_product_sheet);
 
     }
 
