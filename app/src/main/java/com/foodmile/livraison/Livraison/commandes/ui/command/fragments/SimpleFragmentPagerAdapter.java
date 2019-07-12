@@ -1,4 +1,4 @@
-package com.foodmile.livraison.Livraison.commandes.ui.command;
+package com.foodmile.livraison.Livraison.commandes.ui.command.fragments;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -13,7 +13,7 @@ import com.foodmile.livraison.Livraison.commandes.ui.command.fragments.selection
  */
 public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    SimpleFragmentPagerAdapter(FragmentManager fm) {
+    public SimpleFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 

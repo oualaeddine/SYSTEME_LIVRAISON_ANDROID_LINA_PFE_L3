@@ -1,5 +1,7 @@
 package com.foodmile.livraison.Livraison.Classes;
 
+import java.util.Objects;
+
 public class Produit {
     String idproduit;
     String nomproduit;
@@ -68,4 +70,14 @@ public class Produit {
     public void setId_cat(String id_cat) {
         this.id_cat = id_cat;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Produit produit = (Produit) o;
+        return idproduit.equals(produit.idproduit);
+    }
+
+
 }

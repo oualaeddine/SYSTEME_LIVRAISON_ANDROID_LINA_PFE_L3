@@ -1,5 +1,7 @@
 package com.foodmile.livraison.Livraison.commandes.system.models;
 
+import com.foodmile.livraison.Livraison.Classes.Produit;
+
 import java.util.LinkedList;
 
 /**
@@ -8,13 +10,37 @@ import java.util.LinkedList;
  */
 public class Command {
 
-    LinkedList<CommandProduct> products;
+    private final LinkedList<CommandProduct> products;
+
+    public Command() {
+        products = new LinkedList<>();
+    }
 
     public LinkedList<CommandProduct> getProducts() {
         return products;
     }
 
-    public void setProducts(LinkedList<CommandProduct> products) {
-        this.products = products;
+    public void addProduct(CommandProduct p) {
+        if (products.contains(p)) {
+            updateProduct(p);
+        } else {
+            products.add(p);
+        }
+    }
+
+    private void updateProduct(CommandProduct p) {
+        products.set(products.indexOf(p), p);
+    }
+
+    public void removeProduct(CommandProduct produit) {
+        products.remove(produit);
+    }
+
+    public void clearCommand() {
+        products.clear();
+    }
+
+    public boolean has(CommandProduct produit) {
+        return products.contains(produit);
     }
 }
