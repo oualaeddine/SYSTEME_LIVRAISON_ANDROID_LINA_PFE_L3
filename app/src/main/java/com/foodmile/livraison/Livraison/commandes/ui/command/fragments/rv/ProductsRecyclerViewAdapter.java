@@ -1,10 +1,12 @@
 package com.foodmile.livraison.Livraison.commandes.ui.command.fragments.rv;
 
+import android.content.Context;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.foodmile.livraison.Livraison.Classes.Produit;
 import com.foodmile.livraison.Livraison.commandes.system.models.CommandProduct;
 import com.foodmile.livraison.Livraison.commandes.ui.command.CommandActivity;
 
@@ -18,9 +20,11 @@ public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ProductVie
     public static final int SELECTION = 0, RECAP = 1;
     private final int type;
     private LinkedList<CommandProduct> data;
+    private Context context;
 
-    public ProductsRecyclerViewAdapter(int type) {
+    public ProductsRecyclerViewAdapter(int type, Context context) {
         this.type = type;
+        this.context = context;
         if (type == RECAP)
             data = CommandActivity.currentCommand.getProducts();
         else
@@ -30,7 +34,7 @@ public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ProductVie
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        return new ProductViewHolder(parent, type, context);
     }
 
     @Override
@@ -49,5 +53,14 @@ public class ProductsRecyclerViewAdapter extends RecyclerView.Adapter<ProductVie
 
     public void refreshRecapData() {
         data = CommandActivity.currentCommand.getProducts();
+        notifyDataSetChanged();
+    }
+
+    public void setData(LinkedList<Produit> products) {
+        data = new LinkedList<>();
+        for (Produit p : products) {
+            data.add(new CommandProduct(p, 0));
+        }
+        notifyDataSetChanged();
     }
 }

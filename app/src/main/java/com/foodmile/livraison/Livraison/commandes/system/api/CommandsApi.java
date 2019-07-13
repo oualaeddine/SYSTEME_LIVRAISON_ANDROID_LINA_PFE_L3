@@ -3,6 +3,7 @@ package com.foodmile.livraison.Livraison.commandes.system.api;
 import android.content.Context;
 
 import com.foodmile.livraison.Livraison.commandes.system.api.callbacks.BooleanCallback;
+import com.foodmile.livraison.Livraison.commandes.system.api.callbacks.IntCallback;
 import com.foodmile.livraison.Livraison.commandes.system.models.Command;
 
 /**
@@ -15,8 +16,8 @@ public class CommandsApi extends MyApi {
     }
 
 
-    public void sendCommand(Command command, BooleanCallback callback) {
-
+    public void sendCommand(Command command, IntCallback callback) {
+        callback.onResult(1);
     }
 
 }

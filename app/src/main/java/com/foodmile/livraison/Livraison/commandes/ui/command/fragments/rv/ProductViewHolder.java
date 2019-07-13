@@ -3,6 +3,7 @@ package com.foodmile.livraison.Livraison.commandes.ui.command.fragments.rv;
 import android.content.Context;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -45,7 +46,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
 
     }
 
-    public void setRecapProduct(final CommandProduct p) {
+    void setRecapProduct(final CommandProduct p) {
         productQuantity.setText(0);
         decrementBtn.setEnabled(false);
         /*removeBtn.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +77,7 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
         setProduct(p);
     }
 
-    public void setProduct(final CommandProduct p) {
+    void setProduct(final CommandProduct p) {
         productName.setText(p.getProduit().getNomproduit());
         productPrice.setText(p.getProduit().getPrixproduit());
         if (this.type == SELECTION)
@@ -88,11 +89,38 @@ public class ProductViewHolder extends RecyclerView.ViewHolder {
             });
     }
 
-    private void openSelectionDialog(CommandProduct p) {
+    private void openSelectionDialog(final CommandProduct p) {
 
-        DialogSheet dialogSheet = new DialogSheet(context);
+        final DialogSheet dialogSheet = new DialogSheet(context);
         dialogSheet.setView(R.layout.select_product_sheet);
 
+        View dialogView = dialogSheet.getInflatedView();
+
+        Button btnAdd = dialogView.findViewById(R.id.add_btn);
+        Button btnCancel = dialogView.findViewById(R.id.cancel_btn);
+
+        final EditText qnt = dialogView.findViewById(R.id.et_quantity);
+        TextView title = dialogView.findViewById(R.id.tv_product);
+
+        title.setText(p.getProduit().getNomproduit());
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                p.setQuantity(Integer.parseInt(qnt.getText().toString()));
+                CommandActivity.currentCommand.addProduct(p);
+                dialogSheet.dismiss();
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogSheet.dismiss();
+            }
+        });
+
+        dialogSheet.show();
     }
 
 
